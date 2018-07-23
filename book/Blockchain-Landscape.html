@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Background - KIP Whitepaper</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Whitepaper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Blockchain-Landscape.html" class="active"><strong aria-hidden="true">2.</strong> Blockchain landscape</a></li><li><ol class="section"><li><a href="Blockchain-Landscape.html" class="active"><strong aria-hidden="true">2.1.</strong> Background</a></li><li><a href="Introduction.html"><strong aria-hidden="true">2.2.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">2.2.1.</strong> What is KIP ?</a></li><li><a href="Intro-Why.html"><strong aria-hidden="true">2.2.2.</strong> Why KIP ?</a></li></ol></li></ol></li><li><a href="Krama.html"><strong aria-hidden="true">3.</strong> Krama - The new digital order</a></li><li><ol class="section"><li><a href="Krama.html"><strong aria-hidden="true">3.1.</strong> Enter KIP</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.</strong> System Overview</a></li><li><ol class="section"><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.1.</strong> KIP Wallet Account State</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.2.</strong> K2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.3.</strong> T2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.4.</strong> U2U Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.5.</strong> T2K / K2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.6.</strong> K2U / U2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.7.</strong> T2U / U2T Interaction state transition</a></li></ol></li></ol></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.</strong> Beyond blockchain</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.</strong> Architectural renaissance</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.1.</strong> TDU</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.2.</strong> Big Data &amp; Cognition</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.3.</strong> Scalability</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.4.</strong> Throughput</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.5.</strong> Predictable TCO &amp; Finality</a></li></ol></li><li><a href="Dist-Marketplace.html"><strong aria-hidden="true">4.2.</strong> Distributed Marketplace</a></li><li><a href="DEX.html"><strong aria-hidden="true">4.3.</strong> Token economy &amp; DEX</a></li></ol></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.</strong> Enterprise adoption</a></li><li><ol class="section"><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.1.</strong> Solution models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.2.</strong> Financial models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.3.</strong> Governance models</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">6.</strong> Conclusion</a></li><li><a href="References.html"><strong aria-hidden="true">7.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">8.</strong> Further Reading</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Whitepaper</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="Blockchain-Landscape.html#blockchain-landscape" id="blockchain-landscape"><h2>Blockchain landscape</h2></a>
+<a class="header" href="Blockchain-Landscape.html#background" id="background"><h3>Background</h3></a>
+<p>Evolution of business and its underlying processes always encourage technological advancement in computation &amp; storage. This has led the world to roll through significant leaps in technology &amp; the way its perceived globally.</p>
+<p>It all started with the computing era in late 50’s and the early 60’s when computers were being used to process mathematical and scientific calculations to improve speed and accuracy. Data was moved from papers to disks and tapes. Traditional business processes were transformed by the help of computers resulting in increased efficiency. Computers increased the productivity of companies by several folds. A lot of companies started in this era wrote software to help businesses and then licensed these software to end users. The unit of value in this computing era was the ‘Product’ and the underlying technology played a very supportive role, although early in its existence.</p>
+<p>The introduction of TCP/IP to the world proved to be the fusion of the <em>&quot;Information Era&quot;</em> with the <em>&quot;Augmentation Era&quot;</em>, both at individual and institutional levels. TCP/IP allowed the flattening of the world. Anybody with a computer could be connected to other computers around the world and it created an immense opportunity to host services to interact and exchange information with each other. New value driven models moved from being 'product-centric' to 'customer-centric'. The success of most companies was directly proportional to the number of customers the company served. Search engine companies occupied mainstream spotlight as they had the best number of customers using their services. Lots of other start-ups like Amazon, Facebook, Airbnb and Uber were born that leveraged the power of internet to discover &amp; propagate business-driven network effects. But such intermediaries and aggregators influenced everything in the market dynamics as most of the core components driving these models were centralized in the form of entities, both at business and technology levels.</p>
+<p>From the <em>&quot;Information Era&quot;</em> where everything is centralised, the world has been moving on to an age where critical components are being decentralised. In contrast to the key driver as 'data' in <em>&quot;Augmented Era&quot;</em>, 'Interaction' is the key to driving new values in the hyper connected digital world. Blockchain is the new technological institution that will fundamentally change how we discover, generate &amp; exchange values.</p>
+<p>With an inherent nature of insecurity, humans always depended upon trusted intermediaries to lower uncertainty in exchanging values. With the implementation of blockchain technology, we may be able to reduce the dependency on traditional institutions like banks, corporations and governments to reduce uncertainty and exchange value in the digital world. Several blockchain platforms &amp; technologies have been able to find partial success in disintermediating the incumbents that failed to operate better under ethical &amp; performance grounds.</p>
+<p><img src="images/whitepaper/KIP-Gen_vs_Feat.png" alt="Generations of blockchain - differenciation table" /></p>
+<p align="center"> <b>Fig 1:</b> Generations of Blockchain <sup><a href="Blockchain-Landscape.html#references">[1][2]</a></sup> </p>
+<ul>
+<li>
+<p><strong>Gen 1 Blockchain</strong></p>
+<p>Bitcoin transactions are based on the UTXO(Unspent Transaction Outputs) model, with each UTXO having a denomination and an owner (defined by a 20-byte address which is essentially a cryptographic public key[1]), that identifies each bitcoin with its own identity with fungible behaviour, i.e., to be able to transfer parts or the whole bitcoin from one wallet to another with a degree of divisibility to identify fractional parts of bitcoin.</p>
+<p><img src="images/whitepaper/bitcoin-statetransition.png" alt="Bitcoin State Transition" /></p>
+<p align="center"> <b>Fig 2:</b> Bitcoin State Transition <sup><a href="Blockchain-Landscape.html#references">[1][2]</a></sup></p>
+As depicted in the above figure, the bitcoin transaction is responsible for state changes due to transfer of bitcoins from one wallet to another. Almost all the transactions evolved in this blockchain is user-driven, meaning the transaction was directly signed by the user holding bitcoins in the wallet.
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Gen 2 Blockchain</strong></p>
+<p>Ethereum defines its state transition system as a function which formally verifies a few conditions before executing the transactions that could be directly user-driven or a smart automated contract call from the low-level script executed by the EVM(Ethereum Virtual Machine) based on a few logical triggers driven by oracles etc.</p>
+<p><img src="images/whitepaper/ethereum-statetransition.png" alt="Ethereum State Transition" /></p>
+<p align="center"> <b>Fig 3:</b> Ethereum State Transition <sup><a href="Blockchain-Landscape.html#references">[2]</a></sup></p>
+<p>Before mining, Ethereum transactions are validated by several factors including signature, balance, sender's nonce count, enough gas balance, &amp; validity of receiving account.</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Blockchain-Landscape.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Blockchain-Landscape.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

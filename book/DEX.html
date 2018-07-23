@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - KIP Whitepaper</title>
+        <title>Token economy &amp; DEX - KIP Whitepaper</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Experimental representation of KIP's Whitepaper">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +72,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li><ol class="section"><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.1.</strong> Chapter 1</a></li></ol></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">2.</strong> Chapter 1</a></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">3.</strong> Chapter 1</a></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">4.</strong> Chapter 1</a></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">5.</strong> Chapter 1</a></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">6.</strong> Chapter 1</a></li><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">7.</strong> Chapter 1</a></li></ol>
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.</strong> Blockchain landscape</a></li><li><ol class="section"><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.1.</strong> Background</a></li><li><a href="Introduction.html"><strong aria-hidden="true">2.2.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">2.2.1.</strong> What is KIP ?</a></li><li><a href="Intro-Why.html"><strong aria-hidden="true">2.2.2.</strong> Why KIP ?</a></li></ol></li></ol></li><li><a href="Krama.html"><strong aria-hidden="true">3.</strong> Krama - The new digital order</a></li><li><ol class="section"><li><a href="Krama.html"><strong aria-hidden="true">3.1.</strong> Enter KIP</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.</strong> System Overview</a></li><li><ol class="section"><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.1.</strong> KIP Wallet Account State</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.2.</strong> K2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.3.</strong> T2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.4.</strong> U2U Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.5.</strong> T2K / K2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.6.</strong> K2U / U2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.7.</strong> T2U / U2T Interaction state transition</a></li></ol></li></ol></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.</strong> Beyond blockchain</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.</strong> Architectural renaissance</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.1.</strong> TDU</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.2.</strong> Big Data &amp; Cognition</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.3.</strong> Scalability</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.4.</strong> Throughput</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.5.</strong> Predictable TCO &amp; Finality</a></li></ol></li><li><a href="Dist-Marketplace.html"><strong aria-hidden="true">4.2.</strong> Distributed Marketplace</a></li><li><a href="DEX.html" class="active"><strong aria-hidden="true">4.3.</strong> Token economy &amp; DEX</a></li></ol></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.</strong> Enterprise adoption</a></li><li><ol class="section"><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.1.</strong> Solution models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.2.</strong> Financial models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.3.</strong> Governance models</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">6.</strong> Conclusion</a></li><li><a href="References.html"><strong aria-hidden="true">7.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">8.</strong> Further Reading</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -136,21 +136,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="chapter_1.html#chapter-1" id="chapter-1"><h1>Chapter 1</h1></a>
-<p>Hola!</p>
+                        <a class="header" href="DEX.html#token-economy--dex" id="token-economy--dex"><h3>Token economy &amp; DEX</h3></a>
+<p>KIP Tokens are an universal interface to all app tokens on the KIP platform and affiliated marketplaces. Developers specify the app token characteristics using Krama Tokenization Services. This is reflected in the token interface smart contract corresponding to the diApp, takes the service usage into account and charge the user for the same.</p>
+<p><img src="images/whitepaper/KIP-Exchange_and_Buffer_mechanism.png" alt="KIP Exchange &amp; Buffer mechanism" /></p>
+<p align="center"> <b>Fig 18:</b> KIP Exchange & Buffer Mechanism</p>
+<p>KIP stands out from the rest in Tokenization aspects by allowing both buffer &amp; exchange mechanisms, thereby achieving a universal interface that balances the supply demand of app tokens in the digital ecosystem. All app tokens shall be ICO’ed by the entity offering the DIapp solution and integrated with an inline index to address volatility and entry.</p>
+<p>KIP also possesses a unique self-balancing utilitarian formula to calculate platform fee and transaction fee for nodes responsible for consensus, and incentivizes the validators’ interests by awarding slice of TDU Scores in the dimensions relevant to trust and economic activities.</p>
+<p><img src="images/whitepaper/KIP-DEX.png" alt="KIP DEX" /></p>
+<p align="center"> <b>Fig 19:</b> KIP Internal DEX</p>
+<p>DEX has become a dire necessity in any multilateral blockchain ecosystem, where token can be intermittently exchanged between 2 parties, when required, to avail a particular service from a vendor.</p>
+<p>KIP shall possess an internal DEX that facilitates the exchange of complimentary tokens. (learn more on DEX working <a href="/pages/technical-primer/TechnicalPrimer.md">here</a>)</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="chapter_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="Dist-Marketplace.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="chapter_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="Enterprise-Adoption.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -162,13 +170,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="chapter_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="Dist-Marketplace.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="chapter_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="Enterprise-Adoption.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
