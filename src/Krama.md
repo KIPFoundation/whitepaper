@@ -11,7 +11,7 @@ Bitcoin was successfully able to decentralize the supply of currency by reward m
 
 Bitcoin's limitation to directly facilitate logical operations for means of transfer evolved Ethereum - a platform to develop truly distributed applications.  
 
-However, ethereum failed to address scalability and throughput issues faced by public blockchain network such as the Bitcoin. Also, ethereum has failed to deliver expectations of the enterprise in maintaining stability of the GAS paid in the divisible form of Ethers(ETH). The gas volatility effect across the network makes it inconvenient for the users to continue with their smart contracts.
+However, ethereum is relatively still ineffective with approaches to address scalability and throughput issues faced by public blockchain network such as the Bitcoin. Also, ethereum is not yet efficient in absoluteness to deliver expectations of the enterprise in maintaining stability of the GAS / Transaction fee paid in the divisible form of Ethers(ETH). The gas volatility effect across the network makes it inconvenient for the users to continue using the smart contracts in the long term, independent of market equilibrium.
 
 In real world scenarios, Blockchain must be paired up with other technologies to truly disrupt the landscape for successful adoption.
 
