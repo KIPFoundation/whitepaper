@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Governance models - KIP Whitepaper</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Whitepaper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.</strong> Blockchain landscape</a></li><li><ol class="section"><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.1.</strong> Background</a></li><li><a href="Introduction.html"><strong aria-hidden="true">2.2.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">2.2.1.</strong> What is KIP ?</a></li><li><a href="Intro-Why.html"><strong aria-hidden="true">2.2.2.</strong> Why KIP ?</a></li></ol></li></ol></li><li><a href="Krama.html"><strong aria-hidden="true">3.</strong> Krama - The new digital order</a></li><li><ol class="section"><li><a href="Krama.html"><strong aria-hidden="true">3.1.</strong> Enter KIP</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.</strong> System Overview</a></li><li><ol class="section"><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.1.</strong> KIP Wallet Account State</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.2.</strong> K2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.3.</strong> T2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.4.</strong> U2U Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.5.</strong> T2K / K2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.6.</strong> K2U / U2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.7.</strong> T2U / U2T Interaction state transition</a></li></ol></li></ol></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.</strong> Beyond blockchain</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.</strong> Architectural renaissance</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.1.</strong> TDU</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.2.</strong> Big Data &amp; Cognition</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.3.</strong> Scalability</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.4.</strong> Throughput</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.5.</strong> Predictable TCO &amp; Finality</a></li></ol></li><li><a href="Dist-Marketplace.html"><strong aria-hidden="true">4.2.</strong> Distributed Marketplace</a></li><li><a href="DEX.html"><strong aria-hidden="true">4.3.</strong> Token economy &amp; DEX</a></li></ol></li><li><a href="Enterprise-Adoption.html" class="active"><strong aria-hidden="true">5.</strong> Enterprise adoption</a></li><li><ol class="section"><li><a href="Enterprise-Adoption.html" class="active"><strong aria-hidden="true">5.1.</strong> Solution models</a></li><li><a href="Enterprise-Adoption.html" class="active"><strong aria-hidden="true">5.2.</strong> Financial models</a></li><li><a href="Enterprise-Adoption.html" class="active"><strong aria-hidden="true">5.3.</strong> Governance models</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">6.</strong> Conclusion</a></li><li><a href="References.html"><strong aria-hidden="true">7.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">8.</strong> Further Reading</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Whitepaper</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#enterprise-adoption" id="enterprise-adoption"><h1>Enterprise adoption</h1></a>
+<a class="header" href="#enterprise-adoption-1" id="enterprise-adoption-1"><h2>Enterprise adoption</h2></a>
+<a class="header" href="#solution-models" id="solution-models"><h3>Solution models</h3></a>
+<p>KIP offers comprehensive &amp; flexible solution models that favours accelerated adoption for your organization.</p>
+<p>KIP also offers a simplistic approach to moving critical components in the business model to be migrated. Continuation of historic data, wherever applicable,can be handled by KIP File System at a relatively cheaper cost and higher availability. Existing diApps on other blockchain platforms compatible with KIP Migration can also practise the same models. (Learn more on <em>Historical Data Migration</em> <a href="/pages/technical-primer/TechnicalPrimer.html">here</a>)</p>
+<p><img src="images/whitepaper/KIP-Solution_Model.png" alt="Enterprise Adoption - Solution model" /></p>
+<p align="center"> <b>Fig 20:</b> Enterprise Adoption - Solution Model</p>
+<p>As represented in the figure above, developers can pick up the specifications based on the organization's strategy &amp; be able to convert them into functional logic in code. This is made possible by KIDE(Krama Integrated Development Environment) - A web IDE that offers seamless environment for development, testing &amp; simulation by providing standard 'consumable' libraries that enables the developer to identify, authenticate and manage actors in a diApp space. KIDE is tightly coupled with all the Krama Services such as Identity Services, Krama Tokenization Services, etc. that are subscribed by the developer's organization. (Learn more on <em>KIDE</em> <a href="/pages/kide/kide-specs.html">here</a>)</p>
+<p>This resulted diApp(distributed intelligent application) is an instance of the code deployed either on KIP's <code>test-net</code> or <code>main-net</code> by paying a platform fee based on the tier of the nodes used to verify the contract's initiation, inherently a transaction. (Learn more on <em>Platform Fee</em> <a href="/pages/technical-primer/TechnicalPrimer.html">here</a>)</p>
+<p>diApps developed on KIP shall be upgrade-able, highly available, secure, and scalable along with user-interactive mechanisms to facilitate feedbacks / iterations.</p>
+<a class="header" href="#financial-models" id="financial-models"><h3>Financial models</h3></a>
+<p>KIP offers a truly decentralized fashion of monetizing assets and solutions in the form of user's subscription to diApp services at a beneficial cost to both parties with lower and predicable interaction fee.</p>
+<p><img src="images/whitepaper/KIP-Financial_Model.png" alt="Enterprise Adoption - Financial model" /></p>
+<p align="center"> <b>Fig 21:</b> Enterprise Adoption - Financial Model</p>
+<p>As depicted in the figure above, developers can float tokens by specifying the nature of the tokens along based on the organization's strategy. This is essentially reflected in a smart contract that spawns tokens in the ecosystem. The characteristics and interface to the tokens are specified in KIDE which is tightly coupled with the Krama Tokenization Service(Learn more on <em>Krama Tokenization Service</em> <a href="/pages/technical-primer/TechnicalPrimer.html">here</a>).</p>
+<p>The tokens are integrated to diApps by reference to an address - the adddress of the smart contract deployed through KIDE. This allows the users to spend the tokens to access wide range of services offered by the diApp. Such tokens are used to avail services in the ecosystem and hence treated as <em>utility tokens</em>.</p>
+<p>The entry to purchase such utility tokens is made possible by DEX(Decentralized Exchange) , an special escrow-like contract run by interested parties to exchange complimentary tokens at a desirable rate and a fee. Users buy relevant tokens necessary by either paying in KIP tokens or by trading one of their other utility tokens. The exchange transactions are mostly immediate, thereby eliminating the synchronous manual efforts needed by the users in comparison to other platforms.</p>
+<a class="header" href="#governance-models" id="governance-models"><h3>Governance models</h3></a>
+<p>As an enterprise-focused ecosystem, KIP ensures behavioral certainty in the network to the best level possible for frictionless service.</p>
+<p>Entities willing to participate as validating nodes in the KIP network need to pass an benchmark / entry test as an onboarding criteria, thereby ensuring a predicted performance before reflecting the KIP's network strength.</p>
+<p>Users holding KIP token for a pre-determined amount of time are eligible for vote to changes in the network. This and a set of other criteria ensures the best of interest from users in the ecosystem and reflects the collective responsibility of upholding the network's stability.</p>
+<p><img src="images/whitepaper/KIP-Governance_Model.png" alt="Enterprise Adoption - Governance model" /></p>
+<p align="center"> <b>Fig 22:</b> Enterprise Adoption - Governance Model</p>
+<p>As depicted in the figure above, Users and eligible voters are notified of significant breaking changes that are proposed in the upcoming upgrade of the network. Each voter casts a vote on individual breaking changes with either a 'yay', 'nay' or 'abstain'. Votes pertaining to each breaking change is collected in the <em>voting booth diApp</em> and verified. Dependency check is conducted internally on the breaking changes to prevent issues with upgrades when a change is implemented without it's supported dependency feature.</p>
+<p>Results are calculated based on the epoch and majority rule inscripted into the <em>voting booth diApp</em> , allowing customization wherever required.
+The results once computed are published on all relevant channels.
+KIP platform shall also equip modern OTA-like patch automation mechanisms to fully decentralize the efforts of changes, driven by multi-sig to ensure proper distribution of power. (Learn more on <em>breaking changes &amp; release management</em> <a href="/pages/technical-primer/TechnicalPrimer.html">here</a>).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="DEX.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Enterprise-Adoption.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="DEX.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Enterprise-Adoption.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

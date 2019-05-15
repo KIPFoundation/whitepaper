@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Enter KIP - KIP Whitepaper</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Whitepaper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.</strong> Blockchain landscape</a></li><li><ol class="section"><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.1.</strong> Background</a></li><li><a href="Introduction.html"><strong aria-hidden="true">2.2.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">2.2.1.</strong> What is KIP ?</a></li><li><a href="Intro-Why.html"><strong aria-hidden="true">2.2.2.</strong> Why KIP ?</a></li></ol></li></ol></li><li><a href="Krama.html" class="active"><strong aria-hidden="true">3.</strong> Krama - The new digital order</a></li><li><ol class="section"><li><a href="Krama.html" class="active"><strong aria-hidden="true">3.1.</strong> Enter KIP</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.</strong> System Overview</a></li><li><ol class="section"><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.1.</strong> KIP Wallet Account State</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.2.</strong> K2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.3.</strong> T2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.4.</strong> U2U Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.5.</strong> T2K / K2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.6.</strong> K2U / U2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.7.</strong> T2U / U2T Interaction state transition</a></li></ol></li></ol></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.</strong> Beyond blockchain</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.</strong> Architectural renaissance</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.1.</strong> TDU</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.2.</strong> Big Data &amp; Cognition</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.3.</strong> Scalability</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.4.</strong> Throughput</a></li><li><a href="Beyond-Blockchain.html"><strong aria-hidden="true">4.1.5.</strong> Predictable TCO &amp; Finality</a></li></ol></li><li><a href="Dist-Marketplace.html"><strong aria-hidden="true">4.2.</strong> Distributed Marketplace</a></li><li><a href="DEX.html"><strong aria-hidden="true">4.3.</strong> Token economy &amp; DEX</a></li></ol></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.</strong> Enterprise adoption</a></li><li><ol class="section"><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.1.</strong> Solution models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.2.</strong> Financial models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.3.</strong> Governance models</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">6.</strong> Conclusion</a></li><li><a href="References.html"><strong aria-hidden="true">7.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">8.</strong> Further Reading</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Whitepaper</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#krama---the-new-digital-order" id="krama---the-new-digital-order"><h2>Krama - The new digital order</h2></a>
+<a class="header" href="#enter-kip" id="enter-kip"><h3>Enter KIP</h3></a>
+<p><img src="images/whitepaper/KIP-Krama_PoV.png" alt="Krama PoV" /></p>
+<p align="center"> <b>Fig 4:</b> Krama PoV</p>
+<p>Bitcoin and the underlying blockchain mechanism are technological homerun. Blockchain gives back the power in the hands of individuals by removing the need of intermediaries to exchange value directly, hence truly enabling decentralized economies and transform tedious processes that involve human interventions that are susceptible to radical thinking.</p>
+<p>Bitcoin was successfully able to decentralize the supply of currency by reward mechanisms.</p>
+<p>Bitcoin's limitation to directly facilitate logical operations for means of transfer evolved Ethereum - a platform to develop truly distributed applications.</p>
+<p>However, ethereum is relatively still ineffective with approaches to address scalability and throughput issues faced by public blockchain network such as the Bitcoin. Also, ethereum is not yet efficient in absoluteness to deliver expectations of the enterprise in maintaining stability of the GAS / Transaction fee paid in the divisible form of Ethers(ETH). The gas volatility effect across the network makes it inconvenient for the users to continue using the smart contracts in the long term, independent of market equilibrium.</p>
+<p>In real world scenarios, Blockchain must be paired up with other technologies to truly disrupt the landscape for successful adoption.</p>
+<p>KIP addresses this challenge by adding context to the blockchain by leveraging IPFS to scale storage-hungry applications, and KIDE for seamless development experience.</p>
+<p>Major components encompassing the KIP ecosystem are:</p>
+<ul>
+<li>
+<p><strong>diApp:</strong> The distributed intelligent application</p>
+</li>
+<li>
+<p><strong>KIP Service Interface:</strong> Authenticate &amp; relay user requests to managers of all the Krama services mentioned.</p>
+</li>
+<li>
+<p><strong>Krama Identity Services:</strong> Authenticate actors using external sources such as social IDs, Govt. issued IDs, Dev account IDs &amp; Devices.</p>
+</li>
+<li>
+<p><strong>Krama Smart Contract Services:</strong> Manage accounts, facilitate logical operations, manage accessibility, and security.</p>
+</li>
+<li>
+<p><strong>Krama Tokenization Services:</strong> Float, transfer &amp; manage ERC standard tokens by their characteristics.</p>
+</li>
+<li>
+<p><strong>Krama App Services:</strong> Manage various app-generics ranging from PIN Locks, custom UX elements to deep linking messaging etc.</p>
+</li>
+<li>
+<p><strong>Krama File Services:</strong> On-demand CRUD Operations on KFS &amp; external storage realms.</p>
+</li>
+<li>
+<p><strong>Krama Conformity Services:</strong> Manage &amp; monitor device-level attributes to authenticate actors responsible for high-value transactions.</p>
+</li>
+<li>
+<p><strong>Krama Convolution Services:</strong> Recognize physical objects &amp; tag them for accountability in blockchain realm.</p>
+</li>
+<li>
+<p><strong>Krama Media Services:</strong> Facilitate easier off-chain media integration with applications.</p>
+</li>
+<li>
+<p><strong>Krama Reporting Services:</strong> Allow easy plotting various types of graphs &amp; charts across multiple platforms.</p>
+</li>
+<li>
+<p><strong>Krama Cognitive Services:</strong> Allow integration of various intelligence models to trusted source of transaction &amp; state data.</p>
+</li>
+<li>
+<p><strong>Krama Access Services:</strong> Manage contract ownership, lifecycle &amp; network attributes.</p>
+</li>
+<li>
+<p><strong>Krama Network Services:</strong> Relay &amp; manage transactions / state data from heterogenous blockchain &amp; storage realms.</p>
+</li>
+<li>
+<p><strong>Blockchain Realm:</strong> A multiverse connecting heterogenous blockchain environments run by other consortia under wide range of protocols such as Bitcoin, Ethereum, Sawtooth Lake, Iroha, NEO, EOS <sup><a href="#references">[3]</a></sup>  etc.</p>
+</li>
+<li>
+<p><strong>Storage Realm:</strong> A multiverse connecting the KFS(Krama File System) along with external P2P distributed storage services such as IPFS, StorJ etc.</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Intro-Why.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Krama.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Intro-Why.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Krama.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

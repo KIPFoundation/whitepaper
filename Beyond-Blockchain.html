@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Predictable TCO &amp; Finality - KIP Whitepaper</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Whitepaper">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.</strong> Blockchain landscape</a></li><li><ol class="section"><li><a href="Blockchain-Landscape.html"><strong aria-hidden="true">2.1.</strong> Background</a></li><li><a href="Introduction.html"><strong aria-hidden="true">2.2.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">2.2.1.</strong> What is KIP ?</a></li><li><a href="Intro-Why.html"><strong aria-hidden="true">2.2.2.</strong> Why KIP ?</a></li></ol></li></ol></li><li><a href="Krama.html"><strong aria-hidden="true">3.</strong> Krama - The new digital order</a></li><li><ol class="section"><li><a href="Krama.html"><strong aria-hidden="true">3.1.</strong> Enter KIP</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.</strong> System Overview</a></li><li><ol class="section"><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.1.</strong> KIP Wallet Account State</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.2.</strong> K2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.3.</strong> T2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.4.</strong> U2U Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.5.</strong> T2K / K2T Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.6.</strong> K2U / U2K Interaction state transition</a></li><li><a href="Krama-Overview.html"><strong aria-hidden="true">3.2.7.</strong> T2U / U2T Interaction state transition</a></li></ol></li></ol></li><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.</strong> Beyond blockchain</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.</strong> Architectural renaissance</a></li><li><ol class="section"><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.1.</strong> TDU</a></li><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.2.</strong> Big Data &amp; Cognition</a></li><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.3.</strong> Scalability</a></li><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.4.</strong> Throughput</a></li><li><a href="Beyond-Blockchain.html" class="active"><strong aria-hidden="true">4.1.5.</strong> Predictable TCO &amp; Finality</a></li></ol></li><li><a href="Dist-Marketplace.html"><strong aria-hidden="true">4.2.</strong> Distributed Marketplace</a></li><li><a href="DEX.html"><strong aria-hidden="true">4.3.</strong> Token economy &amp; DEX</a></li></ol></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.</strong> Enterprise adoption</a></li><li><ol class="section"><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.1.</strong> Solution models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.2.</strong> Financial models</a></li><li><a href="Enterprise-Adoption.html"><strong aria-hidden="true">5.3.</strong> Governance models</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">6.</strong> Conclusion</a></li><li><a href="References.html"><strong aria-hidden="true">7.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">8.</strong> Further Reading</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Whitepaper</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#beyond-blockchain" id="beyond-blockchain"><h2>Beyond blockchain</h2></a>
+<a class="header" href="#architectural-renaissance" id="architectural-renaissance"><h3>Architectural renaissance</h3></a>
+<a class="header" href="#tdu" id="tdu"><h4>TDU</h4></a>
+<p><img src="images/whitepaper/KIP-TDU.png" alt="KIP TDU" /></p>
+  <p align="center"> <b>Fig 12:</b> TDU - New measure of persistence</p>
+<p>T.D.U. stands for Total Digital Utility. Essentially, TDU is a collective measure of disparate behavior of actors in the KIP ecosystem involved across different types of interaction on multiple diApps.</p>
+<p>TDU plays a major role in transforming existing digital <em>&quot;transactions&quot;</em> into <em>&quot;interactions&quot;</em> bearing multiple information vectors. This facilitates the developers to explore a whole new arena of business models and whitespace in the coming digital leap.</p>
+<p>TDU isn't a vehicle to merely capture datapoints. It offers a multi-dimensional value environment for all KIP users to leverage their respective interests and abilities to leverage services. (learn more on TDU <a href="/pages/tdu/tdu-specs.html">here</a>)</p>
+<a class="header" href="#big-data--cognition" id="big-data--cognition"><h4>Big Data &amp; Cognition</h4></a>
+<p><img src="images/whitepaper/Arch-BigData_and_Cognition.png" alt="KIP TDU" /></p>
+  <p align="center"> <b>Fig 13:</b> Big data persistence & Cognition using KFS</p>
+<p>Big data has become an integral part of business processes at various levels of operations. However, emerging platforms have not been able to address the exponential cost of data replication and simply persisting the consensus of the stored data in a fault tolerant manner.<br />
+KIP differentiates itself in the market by enabling the users to store information on an external storage realm KFS  (Krama File System, an enhanced version of IPFS) that is capable of storing large volumes of various forms of data, yet maintaining the cryptographic state changes of the data.(learn more on big data persistence &amp; AI practices <a href="/pages/kfs/kfs-specs.html">here</a>)</p>
+<a class="header" href="#scalability" id="scalability"><h4>Scalability</h4></a>
+<p><img src="images/whitepaper/Arch-Scalability.png" alt="KIP TDU" /></p>
+  <p align="center"> <b>Fig 14:</b> Dynamic scale-out & sentinel network organization on KIP</p>
+<p>Most business use-cases on several blockchain platforms are seldom scalable. This reflects the nascent stage of blockchain environment we are in. However, KIP spawns a new generation of blockchain solutions on top of its platform for truly scalable solutions.<br />
+This is made possible by leveraging PBFT <sup><a href="#references">[7]</a></sup> Hardened RAFT to support abrupt changes in the network strength. The deterministic approach encourages businesses to adopt a minimalistic approach to obtain exponential scaling on cost-efficient hardware, thereby contributing to a greener world.(learn more on scalability <a href="/pages/tara/tara-specs.html">here</a>)</p>
+<a class="header" href="#throughput" id="throughput"><h4>Throughput</h4></a>
+<p><img src="images/whitepaper/Arch-Throughput.png" alt="KIP TDU" /></p>
+  <p align="center"> <b>Fig 15:</b> Throughput using Modulated Trust in KIP </p>
+<p>Real-time businesses such as VISA and other retail or commercial payment systems process thousands of transactions per second. This is far from the current state of majority of blockchain protocols. Waiting for a confirmation of a coffee purchase over sale of diamond doesn’t make true sense in day-to-day life.<br />
+This issue is addressed in KIP by allowing users to choose the level of trust needed to approve of the transaction between the parties. We call it the “modulated trust”. KIP adopts the modulated trust by leveraging TARA <sup><a href="#references">[8]</a></sup> (Ternary Augmented RAFT Architecture) to achieve partial confirmations from nodes designated by the users(we call them as “fast followers”) as well as stakeholders from other regulatory authorities(we call them as “shadow followers”).(learn more on modulated trust <a href="/pages/tara/tara-specs.html">here</a>)</p>
+<a class="header" href="#predictable-tco--finality" id="predictable-tco--finality"><h4>Predictable TCO &amp; Finality</h4></a>
+<p><img src="images/whitepaper/Arch-Gas_Volatility_and_Finality.png" alt="KIP TDU" /></p>
+  <p align="center"> <b>Fig 16:</b> Predictable gas price</p>
+<p>Predictable gas cost &amp; Transaction finality makes sense to business use-cases where assets are represented in some form and certainty is expected on the ownership of such assets. Many public &amp; private blockchain platforms seem to take on this challenge from a game-theory &amp; crypto-economic approach.<br />
+As a business-centric blockchain, KIP primarily leverages the fact that private and permissioned blockchains can design intricacies to punish bad actors economically and legally to ensure finality on the assets exchanges between users.<br />
+KIP also introduces “Multi-Tier nodes” to ensure Txn finality &amp; apt gas usage, thereby encouraging the enterprise in adopting KIP for predictable gas cost. (learn more on predictable gas cost <a href="/pages/technical-primer/TechnicalPrimer.html">here</a>)</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Krama-Overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Beyond-Blockchain.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Krama-Overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Beyond-Blockchain.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
